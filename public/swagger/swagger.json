@@ -1,0 +1,78 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "测试接口，仅做测试",
+        "version": "1.0.0",
+        "title": "node_app接口"
+    },
+    "host": "127.0.0.1:3000",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "用户",
+            "description": "",
+            "sortWeight": 0
+        }
+    ],
+    "schemes": [],
+    "consumes": [],
+    "produces": [],
+    "paths": {
+        "/user/{id}": {
+            "get": {
+                "tags": [
+                    "用户"
+                ],
+                "summary": "根据id获取用户名称",
+                "description": "根据id获取用户名称",
+                "schemes": [
+                    "http"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "type": "integer",
+                        "default": "0",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "format": "",
+                            "description": "",
+                            "title": "default",
+                            "properties": {
+                                "data": {
+                                    "type": "object",
+                                    "format": "",
+                                    "description": "返回数据，查找不到时为空对象时",
+                                    "title": "data",
+                                    "properties": {}
+                                },
+                                "success": {
+                                    "type": "boolean",
+                                    "description": "是否成功"
+                                }
+                            }
+                        },
+                        "sortWeight": 0
+                    }
+                },
+                "sortWeight": 0
+            }
+        }
+    },
+    "definitions": {}
+}
